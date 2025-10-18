@@ -42,17 +42,6 @@
   background-color: #f40612;
 }
 
-
-@media (max-width: 639px) {
-  .home {
-    padding: 1rem 0;
-  }
-
-  .search-form {
-    margin-bottom: 1rem;
-  }
-}
-
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -60,4 +49,34 @@
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+  }
 }
